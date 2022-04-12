@@ -63,6 +63,6 @@ Vutil is a header file that makes it easier to interact and work with C++ Vector
 
 **3**. `cd` into `lib`
 
-**4**. Run `curl https://raw.githubusercontent.com/Kqpa/vutil/blob/master/src/vutil.hpp`
+**4**. Run `curl https://raw.githubusercontent.com/Kqpa/vutil/master/src/vutil.hpp`
 
 **5**. Include Vutil by putting `#include "./lib/vutil.hpp"` at the top of your source file
