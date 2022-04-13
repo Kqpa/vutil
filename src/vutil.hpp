@@ -17,18 +17,18 @@ namespace vutil {
     void print_vector(std::vector<T>);
 
     template <typename T>
-    void print_2d_vector(std::vector<std::vector<T>> vec);
+    void print_2d_vector(std::vector<std::vector<T>>);
 
     template <typename T>
-    int calculate_2d_vector_size(std::vector<std::vector<T>> vec);
+    int calculate_2d_vector_size(std::vector<std::vector<T>>);
 
 }
 
 template <typename T>
 void vutil::print_vector(std::vector<T> vec) {
-    for (unsigned long int i = 0; i < 1; ++i) {
+    for (size_t i = 0; i < 1; ++i) {
         std::cout << "(" << i << ") |";
-        for (unsigned long int j = 0; j < vec.size(); ++j) {
+        for (size_t j = 0; j < vec.size(); ++j) {
             if ((j + 1) == vec.size()) {
                 std::cout << std::setw(4) << vec.at(j) << "\n";
             } else {
@@ -40,9 +40,9 @@ void vutil::print_vector(std::vector<T> vec) {
 
 template <typename T>
 void vutil::print_2d_vector(std::vector<std::vector<T>> vec) {
-    for (unsigned long int i = 0; i < vec.size(); i++) {
+    for (size_t i = 0; i < vec.size(); i++) {
         std::cout << "(" << i << ") |";
-        for (unsigned long int j = 0; j < vec.at(i).size(); ++j) {
+        for (size_t j = 0; j < vec.at(i).size(); ++j) {
             std::cout << std::setw(4) << vec.at(i).at(j);
         }
         std::cout << "\n";
@@ -52,11 +52,10 @@ void vutil::print_2d_vector(std::vector<std::vector<T>> vec) {
 template <typename T>
 int vutil::calculate_2d_vector_size(std::vector<std::vector<T>> vec) {
     int size = 0;
-    for (unsigned long int i = 0; i < vec.size(); i++)  {
+    for (size_t i = 0; i < vec.size(); i++)  {
         size += vec.at(i).size();
     }
     return size;
 }
-
 
 #endif /* VUTIL_HPP */
